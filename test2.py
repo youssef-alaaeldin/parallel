@@ -64,7 +64,7 @@ def get_image(filename):
     start_time = time.time()
     img = cv2.imread("C:/Users/pc/Desktop/Paralle Histogram Equalization/uploadedimages/" + filename)
     print("insss")
-    num_cores = cpu_count()
+    num_cores = 2
     rows_per_chunk = img.shape[0] // num_cores
     img_chunks = [img[i:i+rows_per_chunk] for i in range(0, img.shape[0], rows_per_chunk)]
     #send chunks to cores to work on 

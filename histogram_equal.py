@@ -52,7 +52,9 @@ if __name__ == '__main__':
     start_time = time.time()
     img = cv2.imread('C:/Users/pc/Desktop/Paralle Histogram Equalization/einstein.jpg')
     num_cores = cpu_count()
+    print("num cores" , num_cores)
     rows_per_chunk = img.shape[0] // num_cores
+    print(img.shape[0])
     img_chunks = [img[i:i+rows_per_chunk] for i in range(0, img.shape[0], rows_per_chunk)]
     #send chunks to cores to work on 
     with Pool(num_cores) as p:

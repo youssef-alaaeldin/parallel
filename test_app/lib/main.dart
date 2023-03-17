@@ -127,8 +127,8 @@ class ImageScreen extends StatelessWidget {
       ),
       body: Center(
         child: SizedBox(
-          height: 300,
-          width: 300,
+          height: 200,
+          width: 200,
           child: Image.network(imageUrl),
         ),
       ),
